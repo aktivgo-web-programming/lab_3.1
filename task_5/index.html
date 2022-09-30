@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Task 5</title>
+</head>
+<body>
+    <table id="table" border="1"></table>
+    <script>
+        for (let i = 1; i <= 10; i++)
+            createRow(i)
+
+        function createRow(num) {
+            const table = document.getElementById('table');
+            const tr = document.createElement("tr");
+            for (let i = 1; i <= 10; i++) {
+                const td = document.createElement("td");
+                td.style = "text-align: center;"
+                td.innerHTML = `${i} * ${num} = ${i * num}`;
+                tr.appendChild(td);
+            }
+            table.appendChild(tr);
+        }
+    </script>
+</body>
+</html>

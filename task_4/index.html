@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Task 4</title>
+</head>
+<body>
+    <table id="table" border="1"></table>
+    <script>
+        let number = prompt('Input a mumber: ')
+        for (let i = 1; i <= 10; i++)
+            addRow(`<p>${number} * ${i} = ${number * i}</p>`)
+            
+        function addRow(row) {
+            const table = document.getElementById('table');
+            const tr = document.createElement("tr");
+            const td = document.createElement("td");
+            td.innerHTML = row;
+            tr.appendChild(td);
+            table.appendChild(tr);
+        }
+    </script>
+</body>
+</html>
